@@ -23,7 +23,7 @@ def register(user: UserInput):
              is_seller=user.is_seller)
     session.add(u)
     session.commit()
-    return JSONResponse(status_code=HTTP_201_CREATED)
+    return JSONResponse(status_code=HTTP_201_CREATED, content={'message':'User Created'})
 
 
 @user_router.post('/login', tags=['users'])
